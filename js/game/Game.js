@@ -26,20 +26,16 @@ class Game {
     }
 
     bindEvents() {
-        // Detectar si el dispositivo es táctil
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
         if (isTouchDevice) {
-            // Solo usar touchstart en dispositivos táctiles
             this.gameContainer.addEventListener('touchstart', (e) => {
-                e.preventDefault();
                 if (this.isRunning && e.target !== this.startButton) {
                     this.monkey.jump();
                     playSound('monkeyJump2');
                 }
             });
         } else {
-            // Usar click solo en dispositivos no táctiles
             this.gameContainer.addEventListener('click', (e) => {
                 if (e.target !== this.startButton && this.isRunning) {
                     this.monkey.jump();
@@ -47,8 +43,6 @@ class Game {
                 }
             });
         }
-    
-        // El evento keydown funciona igual para ambos casos
         document.addEventListener('keydown', (e) => {
             if (e.code === 'Space') {
                 e.preventDefault();
