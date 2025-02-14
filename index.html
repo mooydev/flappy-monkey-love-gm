@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Flappy Monkey Love</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/rewards.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="score">Puntos: 0</div>
+        <div id="monkey">
+            <img src="./assets/avatars/monkeybabeUp.png" alt="monkey">
+        </div>
+        <div id="startScreen">
+            <h1 id="gameTitle">flappy monkey love</h1>
+            <br />
+            <p id="gameNotice">Toca para empezar</p>
+            <br />
+            <button id="startButton">JUGAR</button>
+        </div>
+    </div>
+
+    <script src="js/utils/constants.js"></script>
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/storage/StorageManager.js"></script>
+    <script src="js/game/Monkey.js"></script>
+    <script src="js/game/Obstacle.js"></script>
+    <script src="js/game/Score.js"></script>
+    <script src="js/effects/hearts.js"></script>
+    <script src="js/rewards/RewardManager.js"></script>
+    <script src="js/rewards/RewardPanel.js"></script>
+    <script src="js/game/Game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

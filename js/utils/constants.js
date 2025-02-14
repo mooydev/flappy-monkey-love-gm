@@ -1,0 +1,5 @@
+const GRAVITY = 0.5;
+const JUMP_FORCE = -10;
+const OBSTACLE_SPEED = 3;
+const OBSTACLE_INTERVAL = 2000;
+const GAP_SIZE = 200;

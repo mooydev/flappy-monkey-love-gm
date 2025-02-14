@@ -1,0 +1,144 @@
+.reward-panel-wrapper {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.reward-panel-wrapper.hidden .reward-panel {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.toggle-rewards-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ff1493;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+}
+
+.toggle-rewards-button:hover {
+    transform: scale(1.1);
+}
+
+.reward-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    min-width: 300px;
+    margin-top: 60px;
+}
+
+.reward-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.close-panel-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.reward-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.rewards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: white;
+}
+
+.reward-item img {
+    width: 40px;
+    height: 40px;
+}
+
+.use-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ff1493;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.use-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.reward-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    animation: popIn 0.5s ease-out;
+}
+
+.reward-notification.normal { background: #ffd700; }
+.reward-notification.silver { background: #c0c0c0; }
+.reward-notification.gold { background: #ffa500; }
+
+@keyframes popIn {
+    0% { transform: translate(-50%, -50%) scale(0); }
+    50% { transform: translate(-50%, -50%) scale(1.2); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.use-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from { transform: translate(-50%, 100%); }
+    to { transform: translate(-50%, 0); }
+}

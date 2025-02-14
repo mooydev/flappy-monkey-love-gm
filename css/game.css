@@ -1,0 +1,92 @@
+#gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    max-width: 500px;
+    background-image: url('../assets/backgrounds/StockCake-Purple\ Pixel\ Sky_1739517890.jpg');
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#monkey {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    transition: transform 0.1s;
+}
+
+#monkey img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.obstacle {
+    position: absolute;
+    width: 60px;
+    background: #ff69b4;
+    border: 3px solid #ff1493;
+    border-radius: 10px;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: red;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: white;
+    z-index: 1;
+}
+
+#startScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    color: white;
+}
+#gameNotice{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#startButton {
+    font-family: 'PIX_lite';
+    padding: 15px 30px;
+    font-size: 20px;
+    background: #ff1493;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.floating-heart {
+    position: absolute;
+    font-size: 24px;
+    animation: float 3s ease-in infinite;
+    opacity: 0;
+}
+
+#controls {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    z-index: 1;
+}
