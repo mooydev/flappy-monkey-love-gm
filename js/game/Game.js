@@ -26,15 +26,28 @@ class Game {
     }
 
     bindEvents() {
+
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     
         if (isTouchDevice) {
+            let lastouchEnd = 0;
             this.gameContainer.addEventListener('touchstart', (e) => {
                 if (this.isRunning && e.target !== this.startButton) {
-                    this.monkey.jump();
+                    let now = Date.now();
+                    
+                    if(now - lastouchEnd <= 300){
+                        e.preventDefault();
+                    }
+                    lastouchEnd = now;
+                    this.monkey.jump();    
                     playSound('monkeyJump2');
                 }
             });
+            
+            this.gameContainer.addEventListener("gesturestart", (e) => {
+                e.preventDefault();
+            });
+    
         } else {
             this.gameContainer.addEventListener('click', (e) => {
                 if (e.target !== this.startButton && this.isRunning) {

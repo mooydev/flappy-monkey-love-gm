@@ -22,7 +22,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(#ff69b4, #ff1493);
-  touch-action: manipulation;
+  touch-action: none;
   overscroll-behavior: none;
   overflow: hidden;
 }
